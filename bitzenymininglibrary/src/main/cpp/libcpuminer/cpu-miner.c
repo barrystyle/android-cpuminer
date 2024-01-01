@@ -1197,7 +1197,7 @@ static void *miner_thread(void *userdata)
 		if (max64 <= 0) {
 			switch (opt_algo) {
                         case ALGO_AURUM:
-				max64 = 0x000fff;
+				max64 = 0xff;
 				break;
 			case ALGO_SCRYPT:
 				max64 = opt_scrypt_n < 16 ? 0x3ffff : 0x3fffff / opt_scrypt_n;
